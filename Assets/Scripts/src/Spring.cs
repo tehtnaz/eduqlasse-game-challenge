@@ -16,6 +16,11 @@ public class Spring : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    public void SetSpringConstant(float newSpringConstant)
+    {
+        springConstant = newSpringConstant;
+    }
+
     public void SetDisplacement(float newDisplacement)
     {
         // distance the centre of the object is displaced with new spring displacement, scaled with transform
@@ -46,6 +51,7 @@ public class Spring : MonoBehaviour
             Vector2 displacementDirection = transform.right;
             Debug.Log(displacementDirection);
 
+            // apply spring force on ball singleton
             BallPhysics.BallPhysicsInstance.ApplyForce(springConstant * displacement * displacementDirection); 
 
             SetDisplacement(0);
