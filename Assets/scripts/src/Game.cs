@@ -1,20 +1,32 @@
 using System;
+using System.Reflection.Metadata;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
     // The games state machine
     public StateMachine sm = null;
-    // the text box on screen
+    // The text box on screen
     public TextMeshProUGUI screen_text = null;
+    // Return to level select button
+    public Button return_button = null;
+    // Local level Tracker
+    public int local_level = 0;
 
-    public static event Action<bool> OnWin;
+    // for the call about winning
+    void OnEnable() => WinBasket.OnWin += HandleWin;
+    void OnDisable() => WinBasket.OnWin -= HandleWin;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        return_button.gameObject.SetActive(false);
+
         if (sm != null)
         {
             sm.Add(GameStates.Paused, new GamePausedState());
@@ -30,5 +42,14 @@ public class Game : MonoBehaviour
     public void Change_Text(string text)
     {
         screen_text.text = text;
+    }
+
+    // Reader function that listens for the signal
+    private void HandleWin(bool didWin)
+    {
+        if (didWin)
+        {
+            sm.Change(GameStates.Win);
+        }
     }
 }

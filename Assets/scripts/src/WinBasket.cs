@@ -15,7 +15,7 @@ public class WinBasket : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("YOU WIN!@");
+            OnWin.Invoke(true);
         }
     }
 }

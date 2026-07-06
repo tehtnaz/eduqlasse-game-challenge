@@ -12,6 +12,9 @@ public class GameWinState : State
     public override void start()
     {
         state_machine.game.Change_Text("YOU WIIIIN!");
+        state_machine.game.return_button.gameObject.SetActive(true);
+        PlayerPrefs.SetInt($"level_{state_machine.game}_complete", 1);
+        PlayerPrefs.Save();
     }
 
     public override void update(float dt)

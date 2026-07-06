@@ -8,6 +8,7 @@ public class StateMachine : MonoBehaviour
     Dictionary<string, State> states = new Dictionary<string, State>();
     // State we currently are in
     public State current_state = null;
+    // The current game instance
     public Game game = null;
 
     // Add a new state to the dictionary
