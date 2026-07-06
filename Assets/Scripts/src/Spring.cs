@@ -15,13 +15,13 @@ public class Spring : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            Vector2 normal = collision.GetContact(0).normal;
-            Debug.Log(normal);
-            BallPhysics.BallPhysicsInstance.ApplyForce(springConstant * displacement * normal); 
+            Vector2 displacementDirection = transform.right;
+            Debug.Log(displacementDirection);
 
-            rigidbody2D.MovePosition(rigidbody2D.position + normal * displacement); // maybe delete this later
+            BallPhysics.BallPhysicsInstance.ApplyForce(springConstant * displacement * displacementDirection); 
+
+            rigidbody2D.MovePosition(rigidbody2D.position + displacementDirection * displacement); // TODO: delete this later
             displacement = 0;
-            
         }
     }
 }
