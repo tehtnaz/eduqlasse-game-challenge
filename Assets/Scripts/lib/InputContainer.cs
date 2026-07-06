@@ -5,16 +5,14 @@ using UnityEngine.UI;
 
 public class InputContainer : MonoBehaviour
 {
-    TMP_InputField inputField;
-    Slider slider;
-
-    UnityEvent<float> OnInputUpdated;
-
     [SerializeField] float minValue;
     [SerializeField] float maxValue;
+    [SerializeField] UnityEvent<float> OnInputUpdated;
+
+    TMP_InputField inputField;
+    Slider slider;
     float value;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if(OnInputUpdated == null) OnInputUpdated = new UnityEvent<float>();

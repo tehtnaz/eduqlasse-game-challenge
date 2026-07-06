@@ -4,15 +4,14 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Spring : MonoBehaviour
 {
-    [SerializeField] float springConstant;
-    float displacement; // positive displacement means being stretched, negative means compressed
-    Rigidbody2D rigidbody2D;
-    SpriteRenderer spriteRenderer;
     [SerializeField] SpringLockSide springLock = SpringLockSide.LockNone;
+    [SerializeField] float springConstant;
+    [SerializeField] float displacement; // positive displacement means being stretched, negative means compressed
+    SpriteRenderer spriteRenderer;
+    
 
     void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
