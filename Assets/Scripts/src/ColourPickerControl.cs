@@ -1,6 +1,8 @@
+using System.Globalization;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using static UnityEngine.Rendering.DebugUI;
 
 public class ColourPickerControl : MonoBehaviour
 {
@@ -25,7 +27,28 @@ public class ColourPickerControl : MonoBehaviour
 
         CreateOutputImage();
 
-        UpdateOutputImage();
+        LoadColour();
+    }
+
+    private void SaveColour()
+    {
+        PlayerPrefs.SetFloat("hue", currentHue);
+        PlayerPrefs.SetFloat("sat", currentSat);
+        PlayerPrefs.SetFloat("val", currentVal);
+    }
+    private void OnDisable()
+    {
+        PlayerPrefs.Save();
+    }
+
+    private void LoadColour()
+    {
+        currentHue = PlayerPrefs.GetFloat("hue", 0f);
+        currentSat = PlayerPrefs.GetFloat("sat", 0f);
+        currentVal = PlayerPrefs.GetFloat("val", 1f);
+
+        hueSlider.value = currentHue;
+        UpdateSVImage();
     }
 
     private void CreateHueImage()
@@ -93,6 +116,9 @@ public class ColourPickerControl : MonoBehaviour
         }
         outputTexture.Apply();
         changeThisColour.color = currentColour;
+
+        changeThisColour.color = currentColour;
+        SaveColour();
     }
 
     public void SetSV(float S, float V)

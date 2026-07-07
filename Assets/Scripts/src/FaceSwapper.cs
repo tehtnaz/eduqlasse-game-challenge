@@ -1,10 +1,11 @@
-using System;
 using UnityEngine;
 
 public class FaceSwapper : MonoBehaviour
 {
     // To swap between the sprites
     [SerializeField] private SpriteRenderer faceRenderer;
+    // Background circle
+    [SerializeField] private SpriteRenderer circleBackground;
     // Holds all the different sprite faces
     [SerializeField] private Sprite[] faces;
 
@@ -12,6 +13,17 @@ public class FaceSwapper : MonoBehaviour
 
     private void Start()
     {
+        if (circleBackground != null)
+        {
+            float hue = PlayerPrefs.GetFloat("hue", 0f);
+            float sat = PlayerPrefs.GetFloat("sat", 0f);
+            float val = PlayerPrefs.GetFloat("val", 1f);
+
+            Color colour = Color.HSVToRGB(hue, sat, val);
+            circleBackground.color = colour;
+        }
+
+
         int savedFace = PlayerPrefs.GetInt("selected_face", 0);
         currentIndex = PlayerPrefs.GetInt("selected_face", 0);
         SetFace(savedFace);

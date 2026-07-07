@@ -9,10 +9,17 @@ public class InitializeGame : MonoBehaviour
     [SerializeField] public Transform canvas;
     // For debugging, unlocks all the leves if set to true
     [SerializeField] public bool unlock = false;
+    // Fully resets the game
+    [SerializeField] public bool reset = false;
 
     // Game initializes all levels and the level buttons
     void Start()
     {
+        if (reset)
+        {
+            PlayerPrefs.DeleteAll();
+        }
+
         if (unlock)
         {
             return;
