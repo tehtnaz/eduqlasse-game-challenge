@@ -17,6 +17,12 @@ public class GamePlayState : State
         // Call unpause on player
         BallPhysics.BallPhysicsInstance.Unpause();
 
+        // call unpause on springs, bad performance, try chaching these
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Spring"))
+        {
+            obj.GetComponent<Spring>().Unpause();
+        } 
+
         state_machine.game.Change_Text("");
     }
 
