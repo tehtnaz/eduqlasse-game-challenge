@@ -4,6 +4,11 @@ using UnityEngine;
 public class BallPhysics : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
+
+    // To save the pre-paused velocity to return to that state afterwards
+    private Vector2 savedVelocity;
+    private float savedAngularVelocity;
+
     void Awake()
     {
         BallPhysicsInstance = this; // singleton
@@ -14,11 +19,18 @@ public class BallPhysics : MonoBehaviour
 
     public void Pause()
     {
+        // Cache motion
+        savedVelocity = rigidbody2D.linearVelocity;
+        savedAngularVelocity = rigidbody2D.angularVelocity;
+
         rigidbody2D.Sleep();
     }
     public void Unpause()
     {
         rigidbody2D.WakeUp();
+
+        rigidbody2D.linearVelocity = savedVelocity;
+        rigidbody2D.angularVelocity = savedAngularVelocity;
     }
 
     public void ApplyForce(Vector2 force)

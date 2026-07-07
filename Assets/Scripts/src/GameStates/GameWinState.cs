@@ -13,7 +13,7 @@ public class GameWinState : State
     {
         state_machine.game.Change_Text("YOU WIIIIN!");
         state_machine.game.return_button.gameObject.SetActive(true);
-        PlayerPrefs.SetInt($"level_{state_machine.game}_complete", 1);
+        PlayerPrefs.SetInt($"level_{state_machine.game.local_level++}_complete", 1);
         PlayerPrefs.Save();
     }
 
