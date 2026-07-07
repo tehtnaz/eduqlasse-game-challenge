@@ -1,8 +1,4 @@
-using System;
-using System.Reflection.Metadata;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +10,8 @@ public class Game : MonoBehaviour
     public TextMeshProUGUI screen_text = null;
     // Return to level select button
     public Button return_button = null;
+    // The Level intro
+    public GameObject IntroCanvas = null;
     // Local level Tracker
     public int local_level = 0;
 
@@ -25,6 +23,7 @@ public class Game : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        IntroCanvas.SetActive(true);
         return_button.gameObject.SetActive(false);
 
         if (sm != null)
@@ -33,8 +32,9 @@ public class Game : MonoBehaviour
             sm.Add(GameStates.Play, new GamePlayState());
             sm.Add(GameStates.Restart, new GameRestartState());
             sm.Add(GameStates.Win, new GameWinState());
+            sm.Add(GameStates.Start, new GameStartState());
 
-            sm.Change(GameStates.Paused);
+            sm.Change(GameStates.Start);
         }
     }
 
@@ -51,5 +51,11 @@ public class Game : MonoBehaviour
         {
             sm.Change(GameStates.Win);
         }
+    }
+
+    public void DisableIntro()
+    {
+
+        IntroCanvas.SetActive(false);
     }
 }
