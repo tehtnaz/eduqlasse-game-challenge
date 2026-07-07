@@ -4,8 +4,10 @@ using UnityEngine;
 public class BallPhysics : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
-    void Start()
+    void Awake()
     {
+        BallPhysicsInstance = this; // singleton
+        
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
     // void FixedUpdate() {   }
@@ -42,13 +44,14 @@ public class BallPhysics : MonoBehaviour
             }
             else
             {
+                // prevents singleton from being overriden
                 Debug.LogWarning("Multiple BallPhysics instances detected! The duplicate will de destroyed.");
                 Destroy(value);
             }
         }
     }
-    void Awake()
+    void OnDestroy()
     {
-        BallPhysicsInstance = this;
+        if(this == ballPhysicsInstance) ballPhysicsInstance = null;
     }
 }

@@ -11,6 +11,7 @@ public class GamePausedState : State
     public override void start()
     {
         // call the pause state on player
+        BallPhysics.BallPhysicsInstance.Pause();
 
         state_machine.game.Change_Text("Left Click to Unpause");
     }

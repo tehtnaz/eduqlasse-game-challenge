@@ -15,6 +15,7 @@ public class GamePlayState : State
     public override void start()
     {
         // Call unpause on player
+        BallPhysics.BallPhysicsInstance.Unpause();
 
         state_machine.game.Change_Text("");
     }

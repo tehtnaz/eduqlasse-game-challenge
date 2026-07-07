@@ -1,7 +1,7 @@
 using UnityEngine;
-
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class Spring : MonoBehaviour
 {
     [SerializeField] SpringLockSide springLock = SpringLockSide.LockNone;
@@ -51,7 +51,7 @@ public class Spring : MonoBehaviour
             Debug.Log(displacementDirection);
 
             // apply spring force on ball singleton
-            BallPhysics.BallPhysicsInstance.ApplyForce(springConstant * displacement * displacementDirection); 
+            BallPhysics.BallPhysicsInstance.ApplyForce(-springConstant * displacement * displacementDirection); 
 
             SetDisplacement(0);
         }
