@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class InitializeGame : MonoBehaviour
@@ -15,6 +14,11 @@ public class InitializeGame : MonoBehaviour
     // Game initializes all levels and the level buttons
     void Start()
     {
+        if (!PlayerPrefs.HasKey("levels_complete"))
+        {
+            PlayerPrefs.SetInt("levels_complete", 1);
+        }
+
         if (reset)
         {
             PlayerPrefs.DeleteAll();

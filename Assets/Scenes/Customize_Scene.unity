@@ -774,6 +774,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1021133598}
     m_Modifications:
     - target: {fileID: 3036974940745927808, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
+      propertyPath: fullUnlock
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036974940745927808, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
       propertyPath: circleBackground
       value: 
       objectReference: {fileID: 344443575}

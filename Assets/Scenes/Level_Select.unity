@@ -866,7 +866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InitializeGame
   canvas: {fileID: 1567864555}
   unlock: 0
-  reset: 1
+  reset: 0
 --- !u!4 &654137123
 Transform:
   m_ObjectHideFlags: 0

@@ -8,11 +8,23 @@ public class FaceSwapper : MonoBehaviour
     [SerializeField] private SpriteRenderer circleBackground;
     // Holds all the different sprite faces
     [SerializeField] private Sprite[] faces;
+    // Holds if you want to unlock everything
+    [SerializeField] private bool fullUnlock = false;
 
     private int currentIndex = 0;
+    private int amountUnlocked = 0;
 
     private void Start()
     {
+        if (fullUnlock)
+        {
+            amountUnlocked = faces.Length;
+        }
+        else
+        {
+            amountUnlocked = PlayerPrefs.GetInt("levels_complete", 0);
+        }
+
         if (circleBackground != null)
         {
             float hue = PlayerPrefs.GetFloat("hue", 0f);
@@ -42,13 +54,24 @@ public class FaceSwapper : MonoBehaviour
     public void NextFace()
     {
         // wraps around
-        int next = (currentIndex + 1) % faces.Length;
+        int next = currentIndex + 1;
+
+        if (next > amountUnlocked)
+        {
+            next = 0;
+        }
         SetFace(next);
     }
 
     public void PreviousFace()
     {
-        int prev = (currentIndex - 1 + faces.Length) % faces.Length;
+        int prev = currentIndex - 1;
+
+        if (prev < 0)
+        {
+            prev = amountUnlocked;
+        }
+
         SetFace(prev);
     }
 }
