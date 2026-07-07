@@ -12,6 +12,13 @@ public class BarGraph : MonoBehaviour
     {
         rectTransform = GetComponent<RectTransform>();
     }
+
+    public void SetDataRange(float minimum, float maximum)
+    {
+        minValue = minimum;
+        maxValue = maximum;
+    }
+
     // rescale bar graph according to new value
     public void SetDataValue(float value)
     {

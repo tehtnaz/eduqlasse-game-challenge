@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class GamePausedState : State
@@ -12,6 +13,12 @@ public class GamePausedState : State
     {
         // call the pause state on player
         BallPhysics.BallPhysicsInstance.Pause();
+
+        // call pause on springs, bad performance, try chaching these
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Spring"))
+        {
+            obj.GetComponent<Spring>().Pause();
+        } 
 
         state_machine.game.Change_Text("Left Click to Unpause");
     }
