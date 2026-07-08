@@ -11,7 +11,7 @@ public class FaceSpin : MonoBehaviour
 
     void Update()
     {
-        float speed = playerBody.linearVelocity.magnitude;
+        float speed = playerBody.linearVelocity.magnitude * Mathf.Sign(playerBody.linearVelocityX);
 
         // rotate with how fast the player circle is moving
         faceTransform.Rotate(0f, 0f, -speed * spinFactor * Time.deltaTime);

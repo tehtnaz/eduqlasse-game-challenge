@@ -22,7 +22,7 @@ public class GamePausedState : State
 
         state_machine.game.ChangePauseUIVisibility(true);
 
-        state_machine.game.Change_Text("Left Click to Unpause");
+        state_machine.game.Change_Text("Right Click to Unpause");
     }
 
     public override void update(float dt)
@@ -32,7 +32,7 @@ public class GamePausedState : State
             state_machine.Change(GameStates.Restart);
         }
 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.rightButton.wasPressedThisFrame)
         {
             state_machine.Change(GameStates.Play);
         }
