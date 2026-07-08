@@ -10,6 +10,14 @@ public class WinBasket : MonoBehaviour
     // Signal saying game is over and you completed the level
     public static event Action<bool> OnWin;
 
+    private void Start()
+    {
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.PlayMusic(SongNames.Game);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 

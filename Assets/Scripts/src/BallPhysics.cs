@@ -9,10 +9,13 @@ public class BallPhysics : MonoBehaviour
     private Vector2 savedVelocity;
     private float savedAngularVelocity;
 
+    // For the boing sound effect
+    [SerializeField] public AudioSource audioSource;
+
     void Awake()
     {
         BallPhysicsInstance = this; // singleton
-        
+
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
     // void FixedUpdate() {   }
@@ -36,6 +39,10 @@ public class BallPhysics : MonoBehaviour
     public void ApplyForce(Vector2 force)
     {
         Debug.Log("applying x: " + force.x + " y: " + force.y);
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(audioSource.clip);
+        }
         rigidbody2D.AddForce(force, ForceMode2D.Impulse);
     }
 
@@ -50,7 +57,7 @@ public class BallPhysics : MonoBehaviour
         }
         set
         {
-            if(ballPhysicsInstance == null)
+            if (ballPhysicsInstance == null)
             {
                 ballPhysicsInstance = value;
             }
@@ -64,6 +71,6 @@ public class BallPhysics : MonoBehaviour
     }
     void OnDestroy()
     {
-        if(this == ballPhysicsInstance) ballPhysicsInstance = null;
+        if (this == ballPhysicsInstance) ballPhysicsInstance = null;
     }
 }

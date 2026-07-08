@@ -14,6 +14,11 @@ public class InitializeGame : MonoBehaviour
     // Game initializes all levels and the level buttons
     void Start()
     {
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.PlayMusic(SongNames.Select_Level);
+        }
+
         if (!PlayerPrefs.HasKey("levels_complete"))
         {
             PlayerPrefs.SetInt("levels_complete", 1);
