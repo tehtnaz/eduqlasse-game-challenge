@@ -14,8 +14,10 @@ public class InitializeGame : MonoBehaviour
     // Game initializes all levels and the level buttons
     void Start()
     {
+        const float volume_change = 1.0f;
         if (MusicManager.Instance != null)
         {
+            MusicManager.Instance.SetVolume(volume_change);
             MusicManager.Instance.PlayMusic(SongNames.Select_Level);
         }
 

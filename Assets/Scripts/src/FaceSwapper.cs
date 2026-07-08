@@ -10,12 +10,19 @@ public class FaceSwapper : MonoBehaviour
     [SerializeField] private Sprite[] faces;
     // Holds if you want to unlock everything
     [SerializeField] private bool fullUnlock = false;
+    // Enables randoms
+    [SerializeField] private bool randomizeFace = false;
 
     private int currentIndex = 0;
     private int amountUnlocked = 0;
 
     private void Start()
     {
+        if (randomizeFace)
+        {
+            Randomize();
+            MusicManager.Instance.PlayMusic(SongNames.Select_Level);
+        }
         if (fullUnlock)
         {
             amountUnlocked = faces.Length;
@@ -73,5 +80,51 @@ public class FaceSwapper : MonoBehaviour
         }
 
         SetFace(prev);
+    }
+
+    public void Randomize()
+    {
+        // random face from ALL faces, ignoring unlock gating
+        int randomFace = Random.Range(0, faces.Length);
+        SetFace(randomFace);
+
+        // random colour
+        float hue = Random.value;
+        float sat = Random.Range(0.5f, 1f);
+        float val = Random.Range(0.7f, 1f);
+
+        Color colour = Color.HSVToRGB(hue, sat, val);
+        if (circleBackground != null)
+        {
+            circleBackground.color = colour;
+        }
+
+        // persist the colour so it matches everywhere the ball appears
+        PlayerPrefs.SetFloat("hue", hue);
+        PlayerPrefs.SetFloat("sat", sat);
+        PlayerPrefs.SetFloat("val", val);
+        PlayerPrefs.Save();
+    }
+
+    // Fully Reset Player
+    public void ResetToDefault()
+    {
+        // face 0
+        SetFace(0);
+
+        // white = full value, zero saturation (HSV 0, 0, 1)
+        float hue = 0f;
+        float sat = 0f;
+        float val = 1f;
+
+        if (circleBackground != null)
+        {
+            circleBackground.color = Color.HSVToRGB(hue, sat, val);
+        }
+
+        PlayerPrefs.SetFloat("hue", hue);
+        PlayerPrefs.SetFloat("sat", sat);
+        PlayerPrefs.SetFloat("val", val);
+        PlayerPrefs.Save();
     }
 }

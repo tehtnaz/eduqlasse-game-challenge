@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class BallPhysics : MonoBehaviour
@@ -12,6 +13,10 @@ public class BallPhysics : MonoBehaviour
 
     // For the boing sound effect
     [SerializeField] public AudioSource audioSource;
+    // extra margin to ensure player is off screen
+    [SerializeField] private float extraMargin = 0.15f;
+    // to see if the player is off screen
+    public Camera mainCamera;
 
     void Awake()
     {
@@ -20,7 +25,33 @@ public class BallPhysics : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>();
     }
-    // void FixedUpdate() {   }
+
+    public void Start()
+    {
+        if (mainCamera == null)
+        {
+            mainCamera = Camera.main;
+        }
+    }
+
+    private void Update()
+    {
+        float worldRadius = circleCollider.radius * Mathf.Max(transform.lossyScale.x, transform.lossyScale.y);
+
+        Vector3 center = mainCamera.WorldToViewportPoint(transform.position);
+        Vector3 edge = mainCamera.WorldToViewportPoint(transform.position + Vector3.right * worldRadius);
+        float viewportRadius = Mathf.Abs(edge.x - center.x);
+
+        float m = viewportRadius + extraMargin;
+
+        bool fullyOffScreen = center.x < -m || center.x > 1f + m || center.y < -m || center.y > 1f + m || center.z < 0;
+
+        if (fullyOffScreen)
+        {
+            Scene current = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(current.buildIndex);
+        }
+    }
 
     public void Pause()
     {

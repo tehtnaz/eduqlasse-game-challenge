@@ -11,9 +11,12 @@ public class GameWinState : State
 
     public override void start()
     {
+        const float volume_change = 0.5f;
+
         if (MusicManager.Instance != null)
         {
             MusicManager.Instance.PlayMusic(SongNames.Winner, false);
+            MusicManager.Instance.SetVolume(volume_change);
         }
 
         state_machine.game.Change_Text("YOU WIIIIN!");
