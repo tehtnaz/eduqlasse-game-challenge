@@ -11,6 +11,9 @@ public class GameWinState : State
 
     public override void start()
     {
+        // call the pause state on player
+        BallPhysics.BallPhysicsInstance.Pause();
+
         const float volume_change = 0.5f;
 
         if (MusicManager.Instance != null)

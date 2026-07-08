@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5290914800194698232}
   - component: {fileID: 3177530004929533873}
   - component: {fileID: 7449850292126446001}
+  - component: {fileID: 8344374425841227263}
   m_Layer: 0
   m_Name: Spring
   m_TagString: Spring
@@ -135,8 +136,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spring
   springLock: 0
-  springConstant: 10.030021
-  displacement: 0.26400772
+  springConstant: 10
+  alignedWithSpring: {fileID: 0}
+  displacement: -0.3
+  triggerBox: {fileID: 8344374425841227263}
+  boxCollider: {fileID: 7449850292126446001}
 --- !u!61 &7449850292126446001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,4 +186,50 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!61 &8344374425841227263
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4814202580819530908}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.06, y: 0.22, z: 0.13, w: 0.21}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.7, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 1
+    adaptiveTiling: 0
+  m_AutoTiling: 1
+  m_Size: {x: 1.2, y: 0.5}
   m_EdgeRadius: 0
