@@ -21,6 +21,11 @@ public class ColourPickerControl : MonoBehaviour
 
     private void Start()
     {
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.PlayMusic(SongNames.Customize);
+        }
+
         CreateHueImage();
 
         CreateSVImage();

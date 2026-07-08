@@ -11,6 +11,11 @@ public class GameWinState : State
 
     public override void start()
     {
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.PlayMusic(SongNames.Winner, false);
+        }
+
         state_machine.game.Change_Text("YOU WIIIIN!");
         state_machine.game.return_button.gameObject.SetActive(true);
 

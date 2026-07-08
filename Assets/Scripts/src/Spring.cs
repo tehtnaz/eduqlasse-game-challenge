@@ -10,6 +10,7 @@ public class Spring : MonoBehaviour
     [SerializeField] SpringLockSide springLock = SpringLockSide.LockNone;
     
     [SerializeField] float springConstant;
+
     public float SpringConstant
     {
         get

@@ -2764,6 +2764,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7563338994873837469, guid: 233d3b942f77fbbdfba41eff5e8e1ba4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563338994873837469, guid: 233d3b942f77fbbdfba41eff5e8e1ba4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563338994873837469, guid: 233d3b942f77fbbdfba41eff5e8e1ba4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8553655642984360376, guid: 233d3b942f77fbbdfba41eff5e8e1ba4, type: 3}
       propertyPath: m_Name
       value: EquationPanel
@@ -2893,7 +2905,7 @@ PrefabInstance:
       objectReference: {fileID: 7757597957498511611}
     - target: {fileID: 4183062730181683112, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.15
+      value: -7.48
       objectReference: {fileID: 0}
     - target: {fileID: 4183062730181683112, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
       propertyPath: m_LocalPosition.y
