@@ -5,7 +5,7 @@ public class BarGraph : MonoBehaviour
 {
     [SerializeField] float minValue;
     [SerializeField] float maxValue;
-    
+
     RectTransform rectTransform;
 
     void Start()
@@ -22,9 +22,12 @@ public class BarGraph : MonoBehaviour
     // rescale bar graph according to new value
     public void SetDataValue(float value)
     {
-        rectTransform.localScale = new Vector2(rectTransform.localScale.x, (value - minValue) / (maxValue - minValue));
+        if (rectTransform != null)
+        {
+            rectTransform.localScale = new Vector2(rectTransform.localScale.x, (value - minValue) / (maxValue - minValue));
+        }
     }
-    
+
     // The following is useful for testing the script
     // [SerializeField] float dataValue;
     // void Update()

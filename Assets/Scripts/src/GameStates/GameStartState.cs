@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,11 +12,17 @@ public class GameStartState : State
 
     public override void start()
     {
+        state_machine.game.Change_Text("");
         BallPhysics.BallPhysicsInstance.Pause();
+
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Spring"))
+        {
+            obj.GetComponent<Spring>().Pause();
+        }
     }
 
     public override void update(float dt)
     {
-        // unused here
+        // null here
     }
 }

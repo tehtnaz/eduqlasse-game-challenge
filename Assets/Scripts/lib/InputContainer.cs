@@ -37,13 +37,19 @@ public class InputContainer : MonoBehaviour
     // clamp value, update all components and notify subscribers of update
     public void OnSliderUpdate(float newValue)
     {
-        if(newValue == value) return;
+        if (slider == null || inputField == null) return;
+        if (newValue == value) return;
         
         value = Mathf.Clamp(newValue, minValue, maxValue);
 
         // update both child component's values
-        slider.value = value;
-        inputField.SetTextWithoutNotify(value.ToString());
+
+        if (slider.value != null)
+        {
+            slider.value = value;
+            inputField.SetTextWithoutNotify(value.ToString());
+        }
+
 
         OnInputUpdated.Invoke(value);
     }

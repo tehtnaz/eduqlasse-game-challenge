@@ -20,6 +20,8 @@ public class Game : MonoBehaviour
     public List<GameObject> uiShownWhenPause;
     // All UI which only wants to be shown when playing
     public List<GameObject> uiShownWhenPlay;
+    // Game Started
+    public bool started = false;
 
     // for the call about winning
     void OnEnable() => WinBasket.OnWin += HandleWin;
@@ -59,8 +61,10 @@ public class Game : MonoBehaviour
         }
     }
 
+    // Disable the intro object
     public void DisableIntro()
     {
+        started = true;
         IntroCanvas.SetActive(false);
     }
 
