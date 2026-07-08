@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,11 @@ public class Game : MonoBehaviour
     public GameObject IntroCanvas = null;
     // Local level Tracker
     public int local_level = 0;
+    [Header("UI Objects")]
+    // All UI which only wants to be shown when paused
+    public List<GameObject> uiShownWhenPause;
+    // All UI which only wants to be shown when playing
+    public List<GameObject> uiShownWhenPlay;
 
     // for the call about winning
     void OnEnable() => WinBasket.OnWin += HandleWin;
@@ -55,7 +61,24 @@ public class Game : MonoBehaviour
 
     public void DisableIntro()
     {
-
         IntroCanvas.SetActive(false);
+    }
+
+    // hide or show gui which wants to be visible only when paused
+    public void ChangePauseUIVisibility(bool enable)
+    {
+        foreach (GameObject item in uiShownWhenPause)
+        {
+            item.SetActive(enable);
+        }
+    }
+
+    // hide or show gui which wants to be visible only when playing
+    public void ChangePlayUIVisibility(bool enable)
+    {
+        foreach (GameObject item in uiShownWhenPlay)
+        {
+            item.SetActive(enable);
+        }
     }
 }

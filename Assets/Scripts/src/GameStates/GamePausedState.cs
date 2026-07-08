@@ -6,7 +6,7 @@ public class GamePausedState : State
 {
     public async override Task end()
     {
-        // unused here
+        state_machine.game.ChangePauseUIVisibility(false);
     }
 
     public override void start()
@@ -18,7 +18,9 @@ public class GamePausedState : State
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Spring"))
         {
             obj.GetComponent<Spring>().Pause();
-        } 
+        }
+
+        state_machine.game.ChangePauseUIVisibility(true);
 
         state_machine.game.Change_Text("Left Click to Unpause");
     }

@@ -11,12 +11,11 @@ public class PotentialEnergy : MonoBehaviour
 
     void Start()
     {
-        // maybe change the data range later in case we display the energy units in the UI
-        graph.SetDataRange(rigidbody.mass * Physics2D.gravity.y * minHeight, rigidbody.mass * Physics2D.gravity.y * maxHeight);
+        graph.SetDataRange(0, rigidbody.mass * Physics2D.gravity.y * (maxHeight - minHeight));
     }
     // Update is called once per frame
     void Update()
     {
-        graph.SetDataValue(rigidbody.mass * Physics2D.gravity.y * rigidbody.position.y);
+        graph.SetDataValue(rigidbody.mass * Physics2D.gravity.y * (rigidbody.position.y - minHeight));
     }
 }
