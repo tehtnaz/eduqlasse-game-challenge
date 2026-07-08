@@ -4,6 +4,7 @@ using UnityEngine;
 public class BallPhysics : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
+    CircleCollider2D circleCollider;
 
     // To save the pre-paused velocity to return to that state afterwards
     private Vector2 savedVelocity;
@@ -17,6 +18,7 @@ public class BallPhysics : MonoBehaviour
         BallPhysicsInstance = this; // singleton
 
         rigidbody2D = GetComponent<Rigidbody2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
     }
     // void FixedUpdate() {   }
 
@@ -27,10 +29,12 @@ public class BallPhysics : MonoBehaviour
         savedAngularVelocity = rigidbody2D.angularVelocity;
 
         rigidbody2D.Sleep();
+        circleCollider.enabled = false;
     }
     public void Unpause()
     {
         rigidbody2D.WakeUp();
+        circleCollider.enabled = true;
 
         rigidbody2D.linearVelocity = savedVelocity;
         rigidbody2D.angularVelocity = savedAngularVelocity;
