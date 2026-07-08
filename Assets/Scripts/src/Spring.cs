@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -35,7 +36,7 @@ public class Spring : MonoBehaviour
     BoxCollider2D boxCollider;
     
 
-    void Start()
+    void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();

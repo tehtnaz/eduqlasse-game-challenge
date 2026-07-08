@@ -48,7 +48,7 @@ public class GamePlayState : State
             state_machine.Change(GameStates.Restart);
         }
 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.rightButton.wasPressedThisFrame)
         {
             state_machine.Change(GameStates.Paused);
         }

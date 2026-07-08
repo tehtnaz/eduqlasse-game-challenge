@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3ae73c0f5d250ff29bfe61a1bf25aa32
+guid: bac57389f8f0b32cd9a715e89f1b1f5b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8971143343992950655
-    second: level2_0
+      213: -5889749906266933800
+    second: level3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: level2_0
+      name: level3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,94 +113,33 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: 960, y: 331}
-        - {x: 959, y: 331}
-        - {x: 942, y: 261}
-        - {x: 940, y: 254}
-        - {x: 929, y: 210}
-        - {x: 928, y: 200}
-        - {x: 923, y: 174}
-        - {x: 921, y: 162}
-        - {x: 920, y: 155}
-        - {x: 917, y: 135}
-        - {x: 915, y: 121}
-        - {x: 913, y: 104}
-        - {x: 911, y: 86}
-        - {x: 909, y: 65}
-        - {x: 908, y: 54}
-        - {x: 905, y: 16}
-        - {x: 904, y: 3}
-        - {x: 902, y: -22}
-        - {x: 900, y: -41}
-        - {x: 897, y: -62}
-        - {x: 891, y: -88}
-        - {x: 886, y: -101}
-        - {x: 881, y: -111}
-        - {x: 871, y: -125}
-        - {x: 863, y: -133}
-        - {x: 849, y: -144}
-        - {x: 844, y: -146}
-        - {x: 836, y: -150}
-        - {x: 815, y: -158}
-        - {x: 788, y: -165}
-        - {x: 751, y: -171}
-        - {x: 733, y: -173}
-        - {x: 723, y: -174}
-        - {x: 711, y: -175}
-        - {x: 697, y: -176}
-        - {x: 682, y: -177}
-        - {x: 659, y: -179}
-        - {x: 634, y: -182}
-        - {x: 614, y: -185}
-        - {x: 590, y: -188}
-        - {x: 579, y: -190}
-        - {x: 534, y: -200}
-        - {x: 512, y: -205}
-        - {x: 486, y: -211}
-        - {x: 434, y: -224}
-        - {x: 415, y: -229}
-        - {x: 393, y: -235}
-        - {x: 364, y: -243}
-        - {x: 329, y: -253}
-        - {x: 305, y: -260}
-        - {x: 235, y: -281}
-        - {x: 232, y: -282}
-        - {x: 222, y: -285}
-        - {x: 209, y: -289}
-        - {x: 151, y: -307}
-        - {x: 116, y: -318}
-        - {x: 84, y: -328}
-        - {x: 65, y: -334}
-        - {x: 52, y: -337}
-        - {x: 30, y: -345}
-        - {x: 17, y: -348}
-        - {x: -5, y: -356}
-        - {x: -18, y: -359}
-        - {x: -40, y: -367}
-        - {x: -72, y: -377}
-        - {x: -137, y: -397}
-        - {x: -160, y: -404}
-        - {x: -180, y: -410}
-        - {x: -213, y: -419}
-        - {x: -228, y: -423}
-        - {x: -227, y: -415}
-        - {x: -235, y: -408}
-        - {x: -237, y: -405}
-        - {x: -242, y: -382}
-        - {x: -250, y: -383}
-        - {x: -265, y: -388}
-        - {x: -280, y: -392}
-        - {x: -336, y: -407}
-        - {x: -377, y: -418}
-        - {x: -474, y: -444}
-        - {x: -478, y: -446}
+      - - {x: 960, y: 438}
+        - {x: 957, y: 438}
+        - {x: 945, y: 386}
+        - {x: 943, y: 327}
+        - {x: 943, y: 160}
+        - {x: 928, y: -82}
+        - {x: 905, y: -205}
+        - {x: 877, y: -278}
+        - {x: 811, y: -335}
+        - {x: 763, y: -327}
+        - {x: 706, y: -289}
+        - {x: 586, y: -173}
+        - {x: 533, y: -169}
+        - {x: 489, y: -177}
+        - {x: 409, y: -193}
+        - {x: 326, y: -218}
+        - {x: 252, y: -243}
+        - {x: 103, y: -299}
+        - {x: -171, y: -403}
+        - {x: -302, y: -445}
         - {x: -960, y: -446}
         - {x: -960, y: -540}
         - {x: 960, y: -540}
-      tessellationDetail: 0.15
+      tessellationDetail: 0.05
       bones: []
-      spriteID: 180b038e8a8108380800000000000000
-      internalID: -8971143343992950655
+      spriteID: 8d5b11d5aa7634ea0800000000000000
+      internalID: -5889749906266933800
       vertices: []
       indices: 
       edges: []
@@ -209,7 +148,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: eca0c121e5e3566c8af52a255a2eff52
+    spriteID: a2d986a2b4e675c559d639094a8111c5
     internalID: 0
     vertices: []
     indices: 
@@ -219,7 +158,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      level2_0: -8971143343992950655
+      level3_0: -5889749906266933800
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
