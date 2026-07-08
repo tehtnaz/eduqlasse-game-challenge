@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputContainer
   minValue: -1
-  maxValue: 1
+  maxValue: 0
   OnInputUpdated:
     m_PersistentCalls:
       m_Calls: []

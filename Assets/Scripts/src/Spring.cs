@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -30,17 +32,17 @@ public class Spring : MonoBehaviour
         }
         private set
         {
-            SetDisplacement(value);
+            SetDisplacement(value, false);
         }
     } 
     SpriteRenderer spriteRenderer;
-    BoxCollider2D boxCollider;
+    [SerializeField] BoxCollider2D triggerBox;
+    [SerializeField] BoxCollider2D boxCollider;
     
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     public void SetSpringConstant(float newSpringConstant)
@@ -50,10 +52,12 @@ public class Spring : MonoBehaviour
 
     public void Pause()
     {
+        triggerBox.enabled = false;
         boxCollider.enabled = false;
     }
     public void Unpause()
     {
+        triggerBox.enabled = true;
         boxCollider.enabled = true;
     }
 
@@ -67,34 +71,48 @@ public class Spring : MonoBehaviour
 
     IEnumerator AnimateSpring()
     {
-        // disable collider so we dont hit ball again
-        boxCollider.enabled = false;
+        // pretend we are paused so we dont hit ball again nor activate this script again
+        Pause();
+
+        // lock left side so it visually makes sense while animating (left, non-pushing side is fixed)
+        springLock = SpringLockSide.LockLeft;
 
         // animate change in displacement over some time (useful for graphs)
         float startingDisplacement = displacement;
         const float timeToAnimate = 0.5f;
         for(float t = 0; t < timeToAnimate; t += Time.deltaTime)
         {
-            SetDisplacement(startingDisplacement * SpringCurve(t / timeToAnimate));
+            SetDisplacement(startingDisplacement * SpringCurve(t / timeToAnimate), false);
             yield return new WaitForEndOfFrame();
         }
 
         // assure displacement is exactly zero
-        SetDisplacement(0);
+        SetDisplacement(0, false);
 
-        // re-enable collider
-        boxCollider.enabled = true;
+        // re-enable colliders
+        Unpause();
         
     }
 
-    public void SetDisplacement(float newDisplacement)
+    public void SetDisplacementAndAlignBall(float newDisplacement)
+    {
+        SetDisplacement(newDisplacement, true);
+    }
+
+    void SetDisplacement(float newDisplacement, bool alignBall)
     {
         // distance the centre of the object is displaced with new spring displacement, scaled with transform
         float centreOffsetScaled = 0.5f * (newDisplacement - displacement) * transform.localScale.x;
+
+
         switch (springLock)
         {
             case SpringLockSide.LockLeft:
                 transform.position += centreOffsetScaled * transform.right;
+                if (alignBall)
+                {
+                    BallPhysics.BallPhysicsInstance.transform.position += 2.0f * centreOffsetScaled * transform.right;
+                }
             break;
             case SpringLockSide.LockRight:
                 transform.position -= centreOffsetScaled * transform.right;
@@ -110,9 +128,9 @@ public class Spring : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.collider.CompareTag("Player") && displacement != 0)
+        if (collider.CompareTag("Player") && displacement != 0)
         {
             Vector2 displacementDirection = transform.right;
             Debug.Log(displacementDirection);

@@ -26,6 +26,7 @@ public class InputContainer : MonoBehaviour
     {
         slider.maxValue = maxValue;
         slider.minValue = minValue;
+        OnSliderUpdate(minValue);
     }
 
     // parse and reuse in slider update function
@@ -44,11 +45,8 @@ public class InputContainer : MonoBehaviour
 
         // update both child component's values
 
-        if (slider.value != null)
-        {
-            slider.value = value;
-            inputField.SetTextWithoutNotify(value.ToString());
-        }
+        slider.value = value;
+        inputField.SetTextWithoutNotify(value.ToString());
 
 
         OnInputUpdated.Invoke(value);
