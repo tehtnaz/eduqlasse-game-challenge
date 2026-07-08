@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 416325506}
   - component: {fileID: 416325505}
   - component: {fileID: 416325504}
+  - component: {fileID: 416325507}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -601,7 +602,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 416325505}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 416325507}
+        m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
+        m_MethodName: SwapScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &416325505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,6 +653,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416325502}
   m_CullTransparentMesh: 1
+--- !u!114 &416325507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416325502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8032fdb7e91212a4c9423ee8e226875d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScenes
+  sceneToLoad: Level_4
 --- !u!1 &524683550
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +678,7 @@ GameObject:
   - component: {fileID: 524683554}
   - component: {fileID: 524683553}
   - component: {fileID: 524683552}
+  - component: {fileID: 524683555}
   m_Layer: 5
   m_Name: Button (6)
   m_TagString: Untagged
@@ -722,7 +749,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 524683553}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 524683555}
+        m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
+        m_MethodName: SwapScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &524683553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,6 +800,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524683550}
   m_CullTransparentMesh: 1
+--- !u!114 &524683555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524683550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8032fdb7e91212a4c9423ee8e226875d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScenes
+  sceneToLoad: Level_6
 --- !u!1 &570533626
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +825,7 @@ GameObject:
   - component: {fileID: 570533630}
   - component: {fileID: 570533629}
   - component: {fileID: 570533628}
+  - component: {fileID: 570533631}
   m_Layer: 5
   m_Name: Button (8)
   m_TagString: Untagged
@@ -843,7 +896,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 570533629}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 570533631}
+        m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
+        m_MethodName: SwapScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &570533629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,6 +947,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570533626}
   m_CullTransparentMesh: 1
+--- !u!114 &570533631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570533626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8032fdb7e91212a4c9423ee8e226875d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScenes
+  sceneToLoad: Level_8
 --- !u!1 &586802463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1156,7 @@ GameObject:
   - component: {fileID: 728668676}
   - component: {fileID: 728668675}
   - component: {fileID: 728668674}
+  - component: {fileID: 728668677}
   m_Layer: 5
   m_Name: Button (7)
   m_TagString: Untagged
@@ -1148,7 +1227,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 728668675}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 728668677}
+        m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
+        m_MethodName: SwapScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &728668675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,6 +1278,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728668672}
   m_CullTransparentMesh: 1
+--- !u!114 &728668677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728668672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8032fdb7e91212a4c9423ee8e226875d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScenes
+  sceneToLoad: Level_7
 --- !u!1 &811552665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,7 +1927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8032fdb7e91212a4c9423ee8e226875d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeScenes
-  sceneToLoad: Level_Basics
+  sceneToLoad: Level_1
 --- !u!1 &1323429140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1940,7 @@ GameObject:
   - component: {fileID: 1323429144}
   - component: {fileID: 1323429143}
   - component: {fileID: 1323429142}
+  - component: {fileID: 1323429145}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -1906,7 +2011,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1323429143}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1323429145}
+        m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
+        m_MethodName: SwapScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1323429143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1945,6 +2062,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323429140}
   m_CullTransparentMesh: 1
+--- !u!114 &1323429145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323429140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8032fdb7e91212a4c9423ee8e226875d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScenes
+  sceneToLoad: Level_3
 --- !u!1 &1333430798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3192,6 +3322,7 @@ GameObject:
   - component: {fileID: 2098779614}
   - component: {fileID: 2098779613}
   - component: {fileID: 2098779612}
+  - component: {fileID: 2098779615}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -3262,7 +3393,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2098779613}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2098779615}
+        m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
+        m_MethodName: SwapScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2098779613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3301,6 +3444,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098779610}
   m_CullTransparentMesh: 1
+--- !u!114 &2098779615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098779610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8032fdb7e91212a4c9423ee8e226875d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScenes
+  sceneToLoad: Level_5
 --- !u!1001 &5938473669656014111
 PrefabInstance:
   m_ObjectHideFlags: 0
