@@ -24,6 +24,12 @@ public class BarGraph : MonoBehaviour
     {
         if (rectTransform != null)
         {
+            float range = maxValue - minValue;
+            if (Mathf.Approximately(range, 0f))
+            {
+                return;
+            }
+
             rectTransform.localScale = new Vector2(rectTransform.localScale.x, (value - minValue) / (maxValue - minValue));
         }
     }

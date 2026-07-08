@@ -308,7 +308,7 @@ MonoBehaviour:
   screen_text: {fileID: 1904130788}
   return_button: {fileID: 240218790}
   IntroCanvas: {fileID: 2042762875}
-  local_level: 1
+  local_level: 7
   uiShownWhenPause:
   - {fileID: 2047600909}
   - {fileID: 478059903}
