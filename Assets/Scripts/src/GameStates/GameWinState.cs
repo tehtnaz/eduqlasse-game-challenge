@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameWinState : State
 {
-    public async override Task end()
+    public override void end()
     {
         // unused here
     }

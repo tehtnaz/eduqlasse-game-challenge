@@ -6,8 +6,7 @@ using UnityEngine.InputSystem;
 
 public class GamePlayState : State
 {
-
-    public async override Task end()
+    public override void end()
     {
         // unused here
     }

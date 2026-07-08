@@ -13,13 +13,17 @@ public class InputContainer : MonoBehaviour
     Slider slider;
     float value;
 
-    void Start()
+    // Blocks slider's issue from being null when slider is rebuilt
+    void Awake()
     {
-        if(OnInputUpdated == null) OnInputUpdated = new UnityEvent<float>();
-        
+        if (OnInputUpdated == null) OnInputUpdated = new UnityEvent<float>();
+
         slider = GetComponentInChildren<Slider>();
         inputField = GetComponentInChildren<TMP_InputField>();
+    }
 
+    void Start()
+    {
         slider.maxValue = maxValue;
         slider.minValue = minValue;
     }
