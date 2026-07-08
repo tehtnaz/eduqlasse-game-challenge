@@ -11,7 +11,7 @@ public abstract class State
     public abstract void start();
 
     // What happens when leaving this state
-    public abstract Task end();
+    public abstract void end();
 
     // What happens every tick in this state
     public abstract void update(float dt);

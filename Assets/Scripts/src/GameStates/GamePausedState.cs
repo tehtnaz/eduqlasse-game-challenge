@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class GamePausedState : State
 {
-    public async override Task end()
+    public override void end()
     {
         state_machine.game.ChangePauseUIVisibility(false);
     }

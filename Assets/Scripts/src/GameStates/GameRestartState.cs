@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameRestartState : State
 {
-    public async override Task end()
+    public override void end()
     {
         // unused here
     }

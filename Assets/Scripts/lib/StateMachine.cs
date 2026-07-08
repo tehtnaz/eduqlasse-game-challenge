@@ -20,7 +20,7 @@ public class StateMachine : MonoBehaviour
     }
 
     // Change what the current state we are currently in
-    public async void Change(string state_name)
+    public void Change(string state_name)
     {
         if (states.ContainsKey(state_name))
         {
@@ -31,7 +31,7 @@ public class StateMachine : MonoBehaviour
             }
             else
             {
-                await current_state.end();
+                current_state.end();
                 current_state = states[state_name];
                 current_state.start();
             }

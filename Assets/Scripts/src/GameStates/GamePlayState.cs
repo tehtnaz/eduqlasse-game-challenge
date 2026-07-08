@@ -6,8 +6,7 @@ using UnityEngine.InputSystem;
 
 public class GamePlayState : State
 {
-
-    public async override Task end()
+    public override void end()
     {
         state_machine.game.ChangePlayUIVisibility(false);
         Time.timeScale = 1.0f;
