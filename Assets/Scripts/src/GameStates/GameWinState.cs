@@ -39,6 +39,7 @@ public class GameWinState : State
 
         if (state_machine.game.castle != null)
         {
+            state_machine.game.Change_Text("YOU WON BALL BOY!");
             state_machine.game.castle.Explode();
         }
     }
