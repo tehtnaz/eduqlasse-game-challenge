@@ -53,6 +53,11 @@ public class Spring : MonoBehaviour
         springConstant = newSpringConstant;
     }
 
+    public void SetForceAtCurrentDisplacement(float force)
+    {
+        springConstant = force / -displacement;
+    }
+
     public void Pause()
     {
         triggerBox.enabled = false;
