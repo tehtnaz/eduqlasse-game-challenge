@@ -748,9 +748,15 @@ PrefabInstance:
       propertyPath: m_text
       value: x
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 5688568262276759628, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 43.999992
+=======
+    - target: {fileID: 4623353174638636238, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+>>>>>>> main
       objectReference: {fileID: 0}
     - target: {fileID: 6614733513086345415, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -796,9 +802,19 @@ PrefabInstance:
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8316815182822654525, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -31
+=======
+    - target: {fileID: 8299945589962959235, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541029615356394662, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+>>>>>>> main
       objectReference: {fileID: 0}
     - target: {fileID: 8989940658433598592, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2005,6 +2021,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
   m_text: ' A 1.00 kg ball is launched by a spring that is compressed 1.00 m. The
     ball is launched at an angle of 50 degrees toward a structure that is 10.5 m
     to the right and 2.0 m above the launch point.
@@ -2017,6 +2034,12 @@ MonoBehaviour:
     Extra Challenge (if you dare!): Determine the velocity
     of the ball after breaking the structure, if the structure broke with a force
     of 10 N acted over 0.5 m'
+=======
+  m_text: "Level 8 \u2014 A spring launches the 1 kg ball with a spring constant
+    of 400 N/m. The ball needs to knock over the wooden planks and reach the pig
+    15 m away. What angle does the ball need to be launched at?\nHINT: the cement
+    blocks are moveable"
+>>>>>>> main
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84da384d51d008248a1ab8dc6e4a499e, type: 2}
   m_sharedMaterial: {fileID: 7731361746330171984, guid: 84da384d51d008248a1ab8dc6e4a499e, type: 2}
