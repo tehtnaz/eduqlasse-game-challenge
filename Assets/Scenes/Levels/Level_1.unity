@@ -2131,7 +2131,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: this is here to explain the basics
+  m_text: The sliders will change the formula on the right, play around with them
+    to beat this level!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84da384d51d008248a1ab8dc6e4a499e, type: 2}
   m_sharedMaterial: {fileID: 7731361746330171984, guid: 84da384d51d008248a1ab8dc6e4a499e, type: 2}

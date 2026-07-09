@@ -26,7 +26,7 @@ public class GameWinState : State
             MusicManager.Instance.SetVolume(volume_change);
         }
 
-        state_machine.game.Change_Text("YOU WIIIIN!");
+        state_machine.game.Change_Text("LEVEL COMPLETE!");
         state_machine.game.return_button.gameObject.SetActive(true);
 
         int this_level = state_machine.game.local_level;
