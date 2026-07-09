@@ -22,10 +22,19 @@ public class BarGraph : MonoBehaviour
     // rescale bar graph according to new value
     public void SetDataValue(float value)
     {
-        if (rectTransform != null)
-        {
-            rectTransform.localScale = new Vector2(rectTransform.localScale.x, (value - minValue) / (maxValue - minValue));
-        }
+        if (rectTransform == null) return;
+
+        float range = maxValue - minValue;
+
+        // zero range return
+        if (Mathf.Approximately(range, 0f)) return;
+
+        float normalized = (value - minValue) / range;
+
+        // guard against NaN/Infinity from any other source too
+        if (float.IsNaN(normalized) || float.IsInfinity(normalized)) return;
+
+        rectTransform.localScale = new Vector3(rectTransform.localScale.x, normalized, 1f);
     }
 
     // The following is useful for testing the script

@@ -63,6 +63,7 @@ public class BallPhysics : MonoBehaviour
 
         rigidbody2D.linearVelocity = Vector2.zero;
         rigidbody2D.angularVelocity = 0;
+        rigidbody2D.simulated = false;
 
         rigidbody2D.Sleep();
         //circleCollider.enabled = false;
@@ -70,6 +71,7 @@ public class BallPhysics : MonoBehaviour
     public void Unpause()
     {
         rigidbody2D.WakeUp();
+        rigidbody2D.simulated = true;
         circleCollider.enabled = true;
 
         rigidbody2D.linearVelocity = savedVelocity;

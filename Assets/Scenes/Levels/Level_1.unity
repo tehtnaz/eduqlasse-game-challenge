@@ -341,8 +341,8 @@ RectTransform:
   m_GameObject: {fileID: 240218787}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 770684121}
   m_Father: {fileID: 296386861}
@@ -2127,8 +2127,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The sliders will change the formula on the right, play around with them
-    to beat this level!
+  m_text: Level 1 - The sliders will change the formula on the right, play around
+    with them to beat this level! Start the game by right clicking and you can pause
+    again whenever! if you need to restart press Q and to slow down press S!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84da384d51d008248a1ab8dc6e4a499e, type: 2}
   m_sharedMaterial: {fileID: 7731361746330171984, guid: 84da384d51d008248a1ab8dc6e4a499e, type: 2}
@@ -2995,8 +2996,29 @@ PrefabInstance:
     - {fileID: 461529173313430568, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6329283596989527315, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2055365731}
   m_SourcePrefab: {fileID: 100100000, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
+--- !u!1 &2055365730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6329283596989527315, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
+  m_PrefabInstance: {fileID: 2055365729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2055365731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055365730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834143d431cda3844b18744a327f78b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RainbowModulator
+  speed: 0.3
 --- !u!1 &2067146834
 GameObject:
   m_ObjectHideFlags: 0
