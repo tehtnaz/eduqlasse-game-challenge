@@ -11,7 +11,8 @@ public class PotentialEnergy : MonoBehaviour
 
     void Start()
     {
-        graph.SetDataRange(0, rigidbody.mass * Physics2D.gravity.y * (maxHeight - minHeight));
+        // modify range by 1.25 so we can display more kinetic while keeping proportions the same between kinetic and potentials 
+        graph.SetDataRange(0, rigidbody.mass * Physics2D.gravity.y * (maxHeight - minHeight)*2.696f);
     }
     // Update is called once per frame
     void Update()

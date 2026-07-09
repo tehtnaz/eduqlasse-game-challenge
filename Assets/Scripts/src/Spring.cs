@@ -11,24 +11,27 @@ public class Spring : MonoBehaviour
 {
     [SerializeField] SpringLockSide springLock = SpringLockSide.LockNone;
     
-    [SerializeField] float springConstant;
+    // this is double so we can try to improve accuracy
+    [SerializeField] double springConstant;
 
     public float SpringConstant
     {
         get
         {
-            return springConstant;
+            return (float)springConstant;
         } 
         private set
         {
             springConstant = value;
         }
     }
-    [SerializeField] float displacement; // positive displacement means being stretched, negative means compressed
+
+    // this is double so we can try to improve accuracy
+    [SerializeField] double displacement; // positive displacement means being stretched, negative means compressed
     public float Displacement {
         get
         {
-            return displacement;
+            return (float)displacement;
         }
         private set
         {
@@ -59,6 +62,8 @@ public class Spring : MonoBehaviour
     {
         triggerBox.enabled = true;
         boxCollider.enabled = true;
+
+        Debug.Log("Expected energy: " + (0.5f*springConstant*displacement*displacement).ToString() + " J");
     }
 
     // cool curve function i came up with on desmos
@@ -78,7 +83,7 @@ public class Spring : MonoBehaviour
         springLock = SpringLockSide.LockLeft;
 
         // animate change in displacement over some time (useful for graphs)
-        float startingDisplacement = displacement;
+        float startingDisplacement = (float)displacement;
         const float timeToAnimate = 0.5f;
         for(float t = 0; t < timeToAnimate; t += Time.deltaTime)
         {
@@ -99,23 +104,23 @@ public class Spring : MonoBehaviour
         SetDisplacement(newDisplacement, true);
     }
 
-    void SetDisplacement(float newDisplacement, bool alignBall)
+    void SetDisplacement(double newDisplacement, bool alignBall)
     {
         // distance the centre of the object is displaced with new spring displacement, scaled with transform
-        float centreOffsetScaled = 0.5f * (newDisplacement - displacement) * transform.localScale.x;
+        double centreOffsetScaled = 0.5 * (newDisplacement - displacement) * transform.localScale.x;
 
 
         switch (springLock)
         {
             case SpringLockSide.LockLeft:
-                transform.position += centreOffsetScaled * transform.right;
+                transform.position += (float)centreOffsetScaled * transform.right;
                 if (alignBall)
                 {
-                    BallPhysics.BallPhysicsInstance.transform.position += 2.0f * centreOffsetScaled * transform.right;
+                    BallPhysics.BallPhysicsInstance.transform.position += 2.0f * (float)centreOffsetScaled * transform.right;
                 }
             break;
             case SpringLockSide.LockRight:
-                transform.position -= centreOffsetScaled * transform.right;
+                transform.position -= (float)centreOffsetScaled * transform.right;
             break;
             // LockNone doesn't apply any change in position
         }
@@ -124,7 +129,7 @@ public class Spring : MonoBehaviour
 
         // update visual stretch according to displacement
         // increased scale decreases visual stretch 
-        spriteRenderer.size = new Vector2(1.0f + displacement / transform.localScale.x, 1.0f);
+        spriteRenderer.size = new Vector2(1.0f + ((float)displacement + 0.3f) / transform.localScale.x, 1.0f);
 
     }
 
@@ -132,11 +137,11 @@ public class Spring : MonoBehaviour
     {
         if (collider.CompareTag("Player") && displacement != 0)
         {
-            Vector2 displacementDirection = transform.right;
+            Vector2 displacementDirection = transform.right * Mathf.Sign(-(float)displacement);
             Debug.Log(displacementDirection);
 
             // apply spring force on ball singleton
-            BallPhysics.BallPhysicsInstance.ApplyForce(-springConstant * displacement * displacementDirection); 
+            BallPhysics.BallPhysicsInstance.ApplyKineticEnergy(springConstant * displacement * displacement, displacementDirection); 
 
             StartCoroutine(AnimateSpring());
         }

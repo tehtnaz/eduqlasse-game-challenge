@@ -1500,8 +1500,7 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 461529173313430568, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3202,5 +3201,8 @@ SceneRoots:
   - {fileID: 2067146836}
   - {fileID: 1903783776}
   - {fileID: 1206820931}
-  - {fileID: 1061551767}
+<<<<<<< HEAD
   - {fileID: 1647590914}
+=======
+  - {fileID: 1061551767}
+>>>>>>> main

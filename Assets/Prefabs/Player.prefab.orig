@@ -337,8 +337,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallPhysics
   audioSource: {fileID: 7185426960458396859}
   extraMargin: 0.15
-  mainCamera: {fileID: 0}
+<<<<<<< HEAD
   applyPhysicsCorrection: 1
+=======
+>>>>>>> main
+  mainCamera: {fileID: 0}
 --- !u!114 &3036974940745927808
 MonoBehaviour:
   m_ObjectHideFlags: 0

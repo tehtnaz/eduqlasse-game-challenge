@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,7 @@ public class BallPhysics : MonoBehaviour
     [SerializeField] public AudioSource audioSource;
     // extra margin to ensure player is off screen
     [SerializeField] private float extraMargin = 0.15f;
+    [SerializeField] bool applyPhysicsCorrection;
     // to see if the player is off screen
     public Camera mainCamera;
 
@@ -59,6 +61,9 @@ public class BallPhysics : MonoBehaviour
         savedVelocity = rigidbody2D.linearVelocity;
         savedAngularVelocity = rigidbody2D.angularVelocity;
 
+        rigidbody2D.linearVelocity = Vector2.zero;
+        rigidbody2D.angularVelocity = 0;
+
         rigidbody2D.Sleep();
         //circleCollider.enabled = false;
     }
@@ -71,14 +76,33 @@ public class BallPhysics : MonoBehaviour
         rigidbody2D.angularVelocity = savedAngularVelocity;
     }
 
-    public void ApplyForce(Vector2 force)
+    public void ApplyKineticEnergy(double energyMagnitude, Vector2 energyDirection)
     {
-        Debug.Log("applying x: " + force.x + " y: " + force.y);
         if (audioSource != null)
         {
             audioSource.PlayOneShot(audioSource.clip);
         }
-        rigidbody2D.AddForce(force, ForceMode2D.Impulse);
+
+        // for some reason, we can't multiply by 2.0f? (thought that's how it should be?)
+        double linearChange = energyMagnitude / rigidbody2D.mass;
+
+        // because of inaccurate unity physics we sometimes lose about 1.7% of the energy if the launch is angled, so we'll slightly correct for that
+        if(applyPhysicsCorrection) linearChange *= 1.02;
+
+        Vector2 sqrtChange = energyDirection * (float)Math.Sqrt(linearChange);
+
+        rigidbody2D.linearVelocity += sqrtChange;
+
+        Debug.Log("Real energy: " + (0.5f*rigidbody2D.mass*rigidbody2D.linearVelocity.sqrMagnitude).ToString() + " J");
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("KillPlayer"))
+        {
+            Scene current = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(current.buildIndex);
+        }
     }
 
 
