@@ -3013,7 +3013,8 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 461529173313430568, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
