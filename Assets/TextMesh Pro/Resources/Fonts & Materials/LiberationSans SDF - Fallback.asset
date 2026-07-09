@@ -464,20 +464,8 @@ MonoBehaviour:
     m_Width: 22
     m_Height: 25
   - m_X: 0
-    m_Y: 187
-    m_Width: 511
-    m_Height: 324
-  - m_X: 55
-    m_Y: 132
-    m_Width: 456
-    m_Height: 379
-  - m_X: 55
-    m_Y: 108
-    m_Width: 6
-    m_Height: 403
-  - m_X: 272
     m_Y: 0
-    m_Width: 239
+    m_Width: 511
     m_Height: 511
   - m_X: 120
     m_Y: 25
@@ -755,9 +743,9 @@ Texture2D:
     Hash: 00000000000000000000000000000000
   m_IsAlphaChannelOptional: 0
   serializedVersion: 4
-  m_Width: 512
-  m_Height: 512
-  m_CompleteImageSize: 262144
+  m_Width: 1
+  m_Height: 1
+  m_CompleteImageSize: 1
   m_MipsStripped: 0
   m_TextureFormat: 1
   m_MipCount: 1
