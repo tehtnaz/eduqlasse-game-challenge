@@ -25,6 +25,8 @@ public class Game : MonoBehaviour
     // Game Started
     public bool started = false;
 
+    [SerializeField] public ExplodeCubes castle = null;
+
     // for the call about winning
     void OnEnable() => WinBasket.OnWin += HandleWin;
     void OnDisable() => WinBasket.OnWin -= HandleWin;

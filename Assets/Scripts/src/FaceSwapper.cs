@@ -12,7 +12,7 @@ public class FaceSwapper : MonoBehaviour
     [SerializeField] private bool fullUnlock = false;
     // Enables randoms
     [SerializeField] private bool randomizeFace = false;
-
+    // Forced to use this specific face
     [SerializeField] private int forcedIndex = -1;
 
     private int currentIndex = 0;

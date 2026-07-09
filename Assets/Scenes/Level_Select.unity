@@ -3289,6 +3289,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackgroundCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3033015788034311748, guid: 3d8a48408c19df24fbf6870f00eef6df, type: 3}
+      propertyPath: m_ScaleFactor
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033015788034311748, guid: 3d8a48408c19df24fbf6870f00eef6df, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4535961672170485850, guid: 3d8a48408c19df24fbf6870f00eef6df, type: 3}
       propertyPath: m_Texture
       value: 
