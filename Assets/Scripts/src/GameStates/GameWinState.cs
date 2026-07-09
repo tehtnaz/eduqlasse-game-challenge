@@ -36,6 +36,11 @@ public class GameWinState : State
         PlayerPrefs.SetInt($"level_{next_level}_complete", 1);
         PlayerPrefs.SetInt("levels_complete", Mathf.Max(best, this_level));
         PlayerPrefs.Save();
+
+        if (state_machine.game.castle != null)
+        {
+            state_machine.game.castle.Explode();
+        }
     }
 
     public override void update(float dt)
