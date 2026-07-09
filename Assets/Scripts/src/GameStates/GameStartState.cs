@@ -13,6 +13,12 @@ public class GameStartState : State
     public override void start()
     {
         state_machine.game.Change_Text("");
+
+        if (state_machine.game.prize != null)
+        {
+            state_machine.game.prize.SetActive(false);
+        }
+
         BallPhysics.BallPhysicsInstance.Pause();
 
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Spring"))

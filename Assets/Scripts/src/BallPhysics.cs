@@ -65,7 +65,7 @@ public class BallPhysics : MonoBehaviour
         rigidbody2D.angularVelocity = 0;
 
         rigidbody2D.Sleep();
-        circleCollider.enabled = false;
+        //circleCollider.enabled = false;
     }
     public void Unpause()
     {

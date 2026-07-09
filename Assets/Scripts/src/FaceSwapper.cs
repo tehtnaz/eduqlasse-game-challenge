@@ -13,6 +13,8 @@ public class FaceSwapper : MonoBehaviour
     // Enables randoms
     [SerializeField] private bool randomizeFace = false;
 
+    [SerializeField] private int forcedIndex = -1;
+
     private int currentIndex = 0;
     private int amountUnlocked = 0;
 
@@ -25,7 +27,7 @@ public class FaceSwapper : MonoBehaviour
         }
         if (fullUnlock)
         {
-            amountUnlocked = faces.Length;
+            amountUnlocked = faces.Length - 1;
         }
         else
         {
@@ -46,15 +48,23 @@ public class FaceSwapper : MonoBehaviour
         int savedFace = PlayerPrefs.GetInt("selected_face", 0);
         currentIndex = PlayerPrefs.GetInt("selected_face", 0);
         SetFace(savedFace);
+
+        if (forcedIndex != -1)
+        {
+            ApplyFace(forcedIndex);
+        }
     }
 
     public void SetFace(int index)
     {
-        currentIndex = index;
-        faceRenderer.sprite = faces[index];
-
+        ApplyFace(index);
         PlayerPrefs.SetInt("selected_face", currentIndex);
         PlayerPrefs.Save();
+    }
+    private void ApplyFace(int index)
+    {
+        currentIndex = index;
+        faceRenderer.sprite = faces[index];
     }
 
     // next face browsing
