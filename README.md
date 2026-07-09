@@ -1,6 +1,7 @@
 # BallBoy
 
 A short educational physics game focused on visualizing basic kinematics
+
 Topic covered:
 - Hooke's Law
 - Equations of motion
