@@ -308,7 +308,7 @@ MonoBehaviour:
   screen_text: {fileID: 1904130788}
   return_button: {fileID: 240218790}
   IntroCanvas: {fileID: 2042762875}
-  local_level: 1
+  local_level: 5
   uiShownWhenPause:
   - {fileID: 2047600909}
   - {fileID: 478059903}
@@ -2961,6 +2961,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2525284262793539432, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3036974940745927808, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
       propertyPath: forcedIndex
       value: 5
@@ -3024,6 +3028,10 @@ PrefabInstance:
     - target: {fileID: 5812044496576957591, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
       propertyPath: m_Name
       value: Prize
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878686141876583193, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8827866871827351376, guid: e39ece3d2a73f5630abe147f0fa29567, type: 3}
       propertyPath: m_Simulated

@@ -1021,11 +1021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3177530004929533873, guid: 57b366c75dee841dcb5f4c83c61d681c, type: 3}
       propertyPath: displacement
-      value: 1
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3177530004929533873, guid: 57b366c75dee841dcb5f4c83c61d681c, type: 3}
       propertyPath: springConstant
-      value: 0.0001
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4814202580819530908, guid: 57b366c75dee841dcb5f4c83c61d681c, type: 3}
       propertyPath: m_Name

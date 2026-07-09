@@ -27,7 +27,7 @@ public class FaceSwapper : MonoBehaviour
         }
         if (fullUnlock)
         {
-            amountUnlocked = faces.Length;
+            amountUnlocked = faces.Length - 1;
         }
         else
         {

@@ -1,5 +1,3 @@
-using System.Threading.Tasks;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameWinState : State
@@ -13,10 +11,10 @@ public class GameWinState : State
     {
         // call the pause state on player
         BallPhysics.BallPhysicsInstance.Pause();
-        
+
         if (state_machine.game.prize != null)
         {
-        state_machine.game.prize.SetActive(true);
+            state_machine.game.prize.SetActive(true);
         }
 
 
@@ -33,9 +31,10 @@ public class GameWinState : State
 
         int this_level = state_machine.game.local_level;
         int next_level = this_level + 1;
+        int best = PlayerPrefs.GetInt("levels_complete", 0);
 
         PlayerPrefs.SetInt($"level_{next_level}_complete", 1);
-        PlayerPrefs.SetInt("levels_complete", this_level);
+        PlayerPrefs.SetInt("levels_complete", Mathf.Max(best, this_level));
         PlayerPrefs.Save();
     }
 
