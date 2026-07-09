@@ -674,7 +674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 272.54797
+      value: 177.384
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -706,11 +706,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1160
+      value: -1274
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -430.45
+      value: -222
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -728,6 +728,10 @@ PrefabInstance:
       propertyPath: m_text
       value: x
       objectReference: {fileID: 0}
+    - target: {fileID: 5688568262276759628, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 43.999992
+      objectReference: {fileID: 0}
     - target: {fileID: 6614733513086345415, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -742,11 +746,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: maxValue
-      value: 360
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: minValue
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.size
@@ -755,22 +759,26 @@ PrefabInstance:
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1289880810}
+      objectReference: {fileID: 935794222}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetZRotation
+      value: SetSpringConstant
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SpringRotator, Assembly-CSharp
+      value: Spring, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316815182822654525, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -31
       objectReference: {fileID: 0}
     - target: {fileID: 8989940658433598592, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -781,7 +789,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1889373779431735277, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
@@ -1412,6 +1421,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3177530004929533873, guid: 57b366c75dee841dcb5f4c83c61d681c, type: 3}
+      propertyPath: displacement
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177530004929533873, guid: 57b366c75dee841dcb5f4c83c61d681c, type: 3}
       propertyPath: springConstant
       value: 400
       objectReference: {fileID: 0}
@@ -1653,7 +1666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289880809}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.42261827, w: 0.9063079}
   m_LocalPosition: {x: -6.15, y: -3.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1661,7 +1674,7 @@ Transform:
   - {fileID: 7757597957498511611}
   - {fileID: 1083046960}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
 --- !u!1001 &1349957577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1951,7 +1964,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: this is here to explain the basics
+  m_text: ' A 1.00 kg ball is launched by a spring that is compressed 1.00 m. The
+    ball is launched at an angle of 50 degrees toward a structure that is 10.5 m
+    to the right and 2.0 m above the launch point.
+
+
+    Determine the spring constant
+    of the launcher.
+
+
+    Extra Challenge (if you dare!): Determine the velocity
+    of the ball after breaking the structure, if the structure broke with a force
+    of 10 N acted over 0.5 m'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1978,8 +2002,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 128
-  m_fontSizeBase: 128
+  m_fontSize: 82.2
+  m_fontSizeBase: 82.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2193,7 +2217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c563d50be527c6148f3f7e639f2c2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakWithEnergy
-  energyToBreak: 10
+  energyToBreak: 5
 --- !u!61 &1676788129
 BoxCollider2D:
   m_ObjectHideFlags: 0
