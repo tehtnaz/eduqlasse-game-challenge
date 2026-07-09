@@ -312,6 +312,7 @@ MonoBehaviour:
   - {fileID: 58063794}
   prize: {fileID: 722484938}
   started: 0
+  castle: {fileID: 0}
 --- !u!1 &240218787
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2533906240983814146, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_text
-      value: k
+      value: k (N/m)
       objectReference: {fileID: 0}
     - target: {fileID: 4093504257269750795, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -726,7 +727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4623353174638636238, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_text
-      value: x
+      value: x (m)
       objectReference: {fileID: 0}
     - target: {fileID: 6614733513086345415, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.x

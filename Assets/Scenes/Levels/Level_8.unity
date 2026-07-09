@@ -1548,7 +1548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2533906240983814146, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_text
-      value: Mass (kG)
+      value: Mass (kg)
       objectReference: {fileID: 0}
     - target: {fileID: 2533906240983814146, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_hasFontAssetChanged
