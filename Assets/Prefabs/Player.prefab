@@ -336,6 +336,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallPhysics
   audioSource: {fileID: 7185426960458396859}
+  extraMargin: 0.15
+  mainCamera: {fileID: 0}
 --- !u!114 &3036974940745927808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,8 +360,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 45946ace6bc54a64fafdc1804df88931, type: 3}
   - {fileID: 21300000, guid: 3e6a74a9f37ff0d4b84a5f37ca20a278, type: 3}
   - {fileID: 21300000, guid: d2959d24654b4014e93dce0de6558d72, type: 3}
+  - {fileID: 21300000, guid: eabd908be5120f744a1f2cb21e47b733, type: 3}
   - {fileID: 21300000, guid: 8b5f3a4fc83e1a04c9a2f1af6efdb243, type: 3}
   fullUnlock: 0
+  randomizeFace: 0
 --- !u!114 &1306322017061770840
 MonoBehaviour:
   m_ObjectHideFlags: 0

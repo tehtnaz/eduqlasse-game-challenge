@@ -20,6 +20,8 @@ public class Game : MonoBehaviour
     public List<GameObject> uiShownWhenPause;
     // All UI which only wants to be shown when playing
     public List<GameObject> uiShownWhenPlay;
+    // The winning cosmetic
+    public GameObject prize;
     // Game Started
     public bool started = false;
 

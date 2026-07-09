@@ -13,6 +13,12 @@ public class GameWinState : State
     {
         // call the pause state on player
         BallPhysics.BallPhysicsInstance.Pause();
+        
+        if (state_machine.game.prize != null)
+        {
+        state_machine.game.prize.SetActive(true);
+        }
+
 
         const float volume_change = 0.5f;
 
