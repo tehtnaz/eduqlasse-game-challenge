@@ -267,7 +267,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5812044496576957591}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -310,7 +310,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: f000c53fb56079928a6094f25486de34, type: 2}
   m_IncludeLayers:
@@ -336,6 +336,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallPhysics
   audioSource: {fileID: 7185426960458396859}
+  extraMargin: 0.15
+  applyPhysicsCorrection: 1
+  mainCamera: {fileID: 0}
 --- !u!114 &3036974940745927808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +363,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d2959d24654b4014e93dce0de6558d72, type: 3}
   - {fileID: 21300000, guid: 8b5f3a4fc83e1a04c9a2f1af6efdb243, type: 3}
   fullUnlock: 0
+  randomizeFace: 0
 --- !u!114 &1306322017061770840
 MonoBehaviour:
   m_ObjectHideFlags: 0

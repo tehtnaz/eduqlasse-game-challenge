@@ -18,6 +18,12 @@ public class WinBasket : MonoBehaviour
         }
     }
 
+    // a hack to make level 1's button work
+    public static void InvokeOnWin()
+    {
+        OnWin.Invoke(true);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 

@@ -219,10 +219,6 @@ PrefabInstance:
       propertyPath: rigidbody
       value: 
       objectReference: {fileID: 474773965}
-    - target: {fileID: 5058233376780290944, guid: 63d96389f22b61479985e923299f2209, type: 3}
-      propertyPath: maxExpectedVelocity
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 5899625111677947817, guid: 63d96389f22b61479985e923299f2209, type: 3}
       propertyPath: m_Name
       value: GraphPanel
@@ -637,15 +633,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4093504257269750795, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4093504257269750795, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4093504257269750795, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_Pivot.x
@@ -677,7 +673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 272.54797
+      value: 188.048
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -713,7 +709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -430.45
+      value: -345.94995
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -731,6 +727,14 @@ PrefabInstance:
       propertyPath: m_text
       value: x
       objectReference: {fileID: 0}
+    - target: {fileID: 5688568262276759628, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688568262276759628, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50.000023
+      objectReference: {fileID: 0}
     - target: {fileID: 6614733513086345415, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -745,11 +749,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: maxValue
-      value: 40
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: minValue
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.size
@@ -758,33 +762,42 @@ PrefabInstance:
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 935794222}
+      objectReference: {fileID: 474773965}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSpringConstant
+      value: set_mass
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Spring, Assembly-CSharp
+      value: UnityEngine.Rigidbody2D, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8316815182822654525, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316815182822654525, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
     - target: {fileID: 8989940658433598592, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8989940658433598592, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1889373779431735277, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
@@ -1410,6 +1423,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3177530004929533873, guid: 57b366c75dee841dcb5f4c83c61d681c, type: 3}
+      propertyPath: springConstant
+      value: 450
+      objectReference: {fileID: 0}
     - target: {fileID: 4814202580819530908, guid: 57b366c75dee841dcb5f4c83c61d681c, type: 3}
       propertyPath: m_Name
       value: Spring

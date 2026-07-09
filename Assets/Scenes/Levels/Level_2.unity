@@ -219,10 +219,6 @@ PrefabInstance:
       propertyPath: rigidbody
       value: 
       objectReference: {fileID: 474773965}
-    - target: {fileID: 5058233376780290944, guid: 63d96389f22b61479985e923299f2209, type: 3}
-      propertyPath: maxExpectedVelocity
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 5899625111677947817, guid: 63d96389f22b61479985e923299f2209, type: 3}
       propertyPath: m_Name
       value: GraphPanel
@@ -589,7 +585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1091813523589755941, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: minValue
-      value: -0.7
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1091813523589755941, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.size
@@ -709,11 +705,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1160
+      value: -1262
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -430.45
+      value: -290
       objectReference: {fileID: 0}
     - target: {fileID: 4620913324147477187, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -745,7 +741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: maxValue
-      value: 40
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7792823738943539433, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: minValue

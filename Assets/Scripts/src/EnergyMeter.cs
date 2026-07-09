@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class EnergyMeter : MonoBehaviour
         {
             Debug.Log("Showing energy meter text");
             inGameText.text = (0.5f * collision.rigidbody.mass * collision.rigidbody.linearVelocity.sqrMagnitude).ToString() + " J";
+            Debug.Log("Observed energy: " + (0.5f * collision.rigidbody.mass * collision.rigidbody.linearVelocity.sqrMagnitude).ToString() + " J");
+            WinBasket.InvokeOnWin();
         }
     }
 }

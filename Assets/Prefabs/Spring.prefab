@@ -137,8 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spring
   springLock: 0
   springConstant: 10
-  alignedWithSpring: {fileID: 0}
-  displacement: -0.3
+  displacement: -0.6
   triggerBox: {fileID: 8344374425841227263}
   boxCollider: {fileID: 7449850292126446001}
 --- !u!61 &7449850292126446001

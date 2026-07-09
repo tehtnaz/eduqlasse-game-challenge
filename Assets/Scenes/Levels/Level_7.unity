@@ -219,10 +219,6 @@ PrefabInstance:
       propertyPath: rigidbody
       value: 
       objectReference: {fileID: 474773965}
-    - target: {fileID: 5058233376780290944, guid: 63d96389f22b61479985e923299f2209, type: 3}
-      propertyPath: maxExpectedVelocity
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 5899625111677947817, guid: 63d96389f22b61479985e923299f2209, type: 3}
       propertyPath: m_Name
       value: GraphPanel
@@ -589,7 +585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1091813523589755941, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: minValue
-      value: -0.7
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1091813523589755941, guid: 6863c8e5127e7c756983f59b1b8c009f, type: 3}
       propertyPath: OnInputUpdated.m_PersistentCalls.m_Calls.Array.size
@@ -1416,7 +1412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3177530004929533873, guid: 57b366c75dee841dcb5f4c83c61d681c, type: 3}
       propertyPath: springConstant
-      value: 40
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4814202580819530908, guid: 57b366c75dee841dcb5f4c83c61d681c, type: 3}
       propertyPath: m_Name

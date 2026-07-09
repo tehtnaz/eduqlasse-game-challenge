@@ -674,7 +674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KineticEnergy
   rigidbody: {fileID: 0}
   graph: {fileID: 8129868392338501129}
-  maxExpectedVelocity: 25
+  maxExpectedVelocity: 23
 --- !u!114 &1388028464434847412
 MonoBehaviour:
   m_ObjectHideFlags: 0
