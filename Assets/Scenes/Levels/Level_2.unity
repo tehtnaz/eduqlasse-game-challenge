@@ -326,8 +326,6 @@ MonoBehaviour:
   prize: {fileID: 733195972}
   started: 0
   castle: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1001 &193033274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -455,7 +453,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8899512653380433999, guid: 60c511c9322817846ae0a1e5dc15e662, type: 3}
   m_PrefabInstance: {fileID: 193033274}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &240218787
 GameObject:
   m_ObjectHideFlags: 0
