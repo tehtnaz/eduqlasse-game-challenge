@@ -69,10 +69,12 @@ MonoBehaviour:
 
     Us = 1/2 * k * x^2
 
+    K = 1/2 * m * v^2
+
     F = ma
 
-    <x, y> = sin(t) i +
-    cos(t) j'
+    <x,
+    y> = cost(t) i + sin(t) j'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84da384d51d008248a1ab8dc6e4a499e, type: 2}
   m_sharedMaterial: {fileID: 7731361746330171984, guid: 84da384d51d008248a1ab8dc6e4a499e, type: 2}
